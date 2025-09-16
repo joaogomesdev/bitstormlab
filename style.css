@@ -1,0 +1,216 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background: #111; /* preto */
+    color: #fff; /* branco */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #000; /* preto sólido */
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff; /* branco */
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #aaa; /* cinza claro */
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background: #111; /* preto */
+}
+
+.hero-content {
+    flex: 1 1 400px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff; /* branco */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #ccc; /* cinza */
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    padding: 12px 25px;
+    background: #444; /* cinza escuro */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #fff;
+    color: #000; /* contraste */
+}
+
+/* Hero image */
+.hero-image {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hero-image img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    filter: brightness(1.1); /* leve destaque */
+}
+
+/* Sobre a Empresa */
+.sobre {
+    padding: 60px 20px;
+    background: #1a1a1a; /* cinza escuro */
+}
+
+.sobre-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.sobre h2 {
+    text-align: center;
+    color: #fff; /* branco */
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.historia {
+    text-align: justify;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc; /* cinza claro */
+}
+
+.valores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.valor {
+    flex: 1 1 400px;
+    background: #222; /* cinza escuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+}
+
+.valor h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.valor ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -2px 5px rgba(255,255,255,0.05);
+    margin-top: 40px;
+}
+
+footer .redes a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+footer .redes a:hover {
+    color: #aaa;
+}
+
+/* Animações suaves */
+.hero, .sobre-container, .valor {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.hero {
+    animation-delay: 0.2s;
+}
+
+.sobre-container {
+    animation-delay: 0.4s;
+}
+
+.valor {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .valores {
+        flex-direction: column;
+        align-items: center;
+    }
+}
